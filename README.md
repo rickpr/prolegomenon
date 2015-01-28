@@ -1,6 +1,5 @@
 # Prolegomenon
 >> "a critical or discursive introduction to a book"
-Inspired by Dr. Chris Lamb
 
 This is a gem intended for UNM to interface Ruby with Prolog.
 
@@ -54,3 +53,5 @@ prolog.epilog
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+> Inspired by Dr. Chris Lamb
