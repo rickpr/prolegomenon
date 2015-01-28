@@ -1,6 +1,8 @@
 # Prolegomenon
 >> "a critical or discursive introduction to a book"
 
+[![Gem Version](https://badge.fury.io/rb/prolego.svg)](http://badge.fury.io/rb/prolego)
+
 This is a gem intended for UNM to interface Ruby with Prolog.
 
 ## Installation

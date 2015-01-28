@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Prolego::VERSION
   spec.authors       = ["Ricardo Piro-Rael"]
   spec.email         = ["fdisk@fdisk.co"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{This gem interfaces Ruby with Prolog via the shell.}
+  spec.description   = %q{Designed initially for UNM Informatics lab}
+  spec.homepage      = "https://github.com/rickpr/prolegomenon"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
