@@ -8,11 +8,11 @@ module Prolego
     end
 
     def command predicate,args
-      @output=%x[swipl -q -f #{@file} -g "#{parg predicate}(#{parg args}),halt"]
+      @output=%x[swipl -q -f '#{@file}' -g '#{parg predicate}(#{parg args}),halt']
     end
 
     def parg arg
-      arg.to_s.gsub /^\[|"|\]$/, "[" => "", "]" => "", "\"" => "'"
+      arg.to_s.gsub /^\[|"|'|\]$/, "[" => "", "]" => "", "'" => "'\"'\"'", "\"" => "'\"'\"'"
     end
 
     def epilog
@@ -20,6 +20,5 @@ module Prolego
     end
 
   end
-     
     
 end
