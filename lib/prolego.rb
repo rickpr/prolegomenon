@@ -16,7 +16,7 @@ module Prolego
     end
 
     def epilog
-      @output.lines.map {|x| x.slice(/.*d/).split("------").join " "}
+      @output.lines.map {|x| x.slice(/[A-Z].*d/).split("------").join " "}
     end
 
   end
