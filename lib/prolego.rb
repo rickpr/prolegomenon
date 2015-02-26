@@ -1,4 +1,5 @@
 require "prolego/version"
+require "json"
 
 module Prolego
   class Query
@@ -16,7 +17,7 @@ module Prolego
     end
 
     def epilog
-      @output.lines.map {|x| x.slice(/.*d/).split("]").last.split("------").join " "}
+      JSON.parse @output.gsub("'","\"")
     end
 
   end
