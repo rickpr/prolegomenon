@@ -37,12 +37,13 @@ argument list expects an **array**, so if you have arrays within your arguments,
 nest them.
 
 ```ruby
-prolog.command "ce",["BS",["MATH 162","ECE 230"]]
+prolog.command "ce",["BS",[["MATH 162","A"],["CE 160L","A"]]]
 ```
 
 We have a special method called `epilog` to get our formatted output. This
 splits our Prolog output for our application, based on the last command sent
-from the current Prolegomenon object.
+from the current Prolegomenon object. This expects lists to be returned. We are
+using `writeq` to do this, then the gem parses them using the JSON gem.
 
 ```ruby
 prolog.epilog
