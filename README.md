@@ -27,8 +27,15 @@ Initiate a Prolog Query as a Ruby object. This expects a file to have some
 predicates defined that it can use from the command line.
 
 ```ruby
-prolog=Prolego::Query.new "Top.pl"
+prolog = Prolego::Query.new("Top.pl")
 ```
+
+If you would like an exception to be thrown if Prolog fails, use `whiny: true`
+
+```ruby
+prolog = Prolego::Query.new("Top.pl", whiny: true)
+```
+
 
 After initializing this, make queries against your Prolog file. Note this runs
 Prolog from the interactive mode, so no need to compile Prolog. The command
@@ -37,7 +44,7 @@ argument list expects an **array**, so if you have arrays within your arguments,
 nest them.
 
 ```ruby
-prolog.command "ce",["BS",[["MATH 162","A"],["CE 160L","A"]]]
+prolog.command("ce",["BS",[["MATH 162","A"],["CE 160L","A"]]])
 ```
 
 We have a special method called `epilog` to get our formatted output. This

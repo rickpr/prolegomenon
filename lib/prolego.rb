@@ -5,7 +5,7 @@ require "open3"
 module Prolego
   class Query
 
-    attr_reader :status, :whiny, :error
+    attr_reader :status, :whiny, :error, :output
 
     def initialize(filepath, whiny: false)
       @file  = filepath
