@@ -47,6 +47,16 @@ nest them.
 prolog.command("ce",["BS",[["MATH 162","A"],["CE 160L","A"]]])
 ```
 
+To get the output of the command, use the `output` method:
+```ruby
+prolog.output
+```
+
+To get anything that went into STDERR (like warnings), use the `error` method:
+```ruby
+prolog.error
+```
+
 We have a special method called `epilog` to get our formatted output. This
 splits our Prolog output for our application, based on the last command sent
 from the current Prolegomenon object. This expects lists to be returned. We are
