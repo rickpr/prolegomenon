@@ -15,7 +15,7 @@ module Prolego
     def command(predicate, args)
       command = "swipl -qf '#{@file}' -g '#{escape(predicate)}(#{escape(args)}),halt'"
       @output, @error, status = Open3.capture3(command)
-      @status = status.exitstatus
+      (@status = status.exitstatus) == 0
     end
 
     def escape(arg)
@@ -23,7 +23,7 @@ module Prolego
     end
 
     def epilog
-      fail "Prolog exit status #{@status}. Check errors with query.error" if @status != 0 && whiny
+      fail "Prolog exit status #{@status}. Check errors with Query#error" if @status != 0 && whiny
       JSON.parse @output.gsub("'", "\"") rescue @output
     end
 
